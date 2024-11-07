@@ -18,6 +18,8 @@ public class Constant {
 	
 	public static final String FILEPATH=System.getProperty("user.dir")+ "//src//main//resources//TestData.xlsx";
 	
+	public static final String CONFIGFILE = System.getProperty("user.dir")+ "//src//main//resources//config.properties";
+	
 	//public static final String IMAGEUPLOADPATH= System.getProperty("user.dir")+ "C://Users//tomcy//apple.jpg";
 
 }

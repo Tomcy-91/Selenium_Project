@@ -53,7 +53,7 @@ public class LoginTest extends BaseClass{
 		
 
   }
-  @Test
+  @Test(groups = {"smoke"})
   public void invalidUsernameValidPassword() throws IOException {
 	  
 	  String username= ExcelUtility.getstringdata(3, 0, "loginpage");

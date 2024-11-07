@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="grouping">
+	<parameter name="browzer" value="chrome"></parameter>
+
+	<listeners>
+		<listener class-name="generatereport.Listeners" />
+	</listeners>
+
+	<test thread-count="5" name="Grouping.xml">
+		<groups>
+			<run>
+				<include name="smoke"></include>
+			</run>
+		</groups>
+
+		<classes>
+			<class name="testscript.LoginTest"></class>
+
+		</classes>
+	</test>
+</suite>

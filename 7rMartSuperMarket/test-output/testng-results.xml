@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-07T20:25:27 IST" name="grouping" finished-at="2024-11-07T20:25:32 IST" duration-ms="4336">
+    <groups>
+      <group name="smoke">
+        <method signature="LoginTest.invalidUsernameValidPassword()[pri:0, instance:testscript.LoginTest@97e93f1]" name="invalidUsernameValidPassword" class="testscript.LoginTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2024-11-07T20:25:27 IST" name="Grouping.xml" finished-at="2024-11-07T20:25:32 IST" duration-ms="4336">
+      <class name="testscript.LoginTest">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testscript.LoginTest@97e93f1]" started-at="2024-11-07T20:25:27 IST" name="beforeMethod" finished-at="2024-11-07T20:25:30 IST" duration-ms="2922" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="invalidUsernameValidPassword()[pri:0, instance:testscript.LoginTest@97e93f1]" started-at="2024-11-07T20:25:30 IST" name="invalidUsernameValidPassword" finished-at="2024-11-07T20:25:32 IST" duration-ms="1351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidUsernameValidPassword -->
+      </class> <!-- testscript.LoginTest -->
+    </test> <!-- Grouping.xml -->
+  </suite> <!-- grouping -->
+</testng-results>
