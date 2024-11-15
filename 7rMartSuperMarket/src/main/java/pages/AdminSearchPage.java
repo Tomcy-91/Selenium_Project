@@ -74,6 +74,8 @@ public AdminSearchPage IsUserAbletoClickonAdminUserMoreInfolink() {
 	{
 		return resultnotfound.isDisplayed();
 	}
+
+	
 }
 
 
