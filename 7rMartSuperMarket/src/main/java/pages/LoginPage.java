@@ -22,20 +22,23 @@ public class LoginPage {
 	@FindBy(xpath ="//p[text()='Dashboard']") WebElement dashboard;
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") WebElement errormessagedisplayed;
 	
-	public void enterUserNamefield(String usernamefield)
+	public LoginPage enterUserNamefield(String usernamefield)
 	{
 		username.sendKeys(usernamefield);
+		return this;
 	
 	}
 	
-	public void enterPasswordfield(String passwordfield)
+	public LoginPage enterPasswordfield(String passwordfield)
 	{
 		password.sendKeys(passwordfield);
+		return this;
 	}
 	
-	public void clickOnsigninbutton() {
+	public HomePage clickOnsigninbutton() {
 		
 		signIn.click();
+		return new HomePage(driver);
 	}
 	
 	public boolean isdashboarddisplayed() {

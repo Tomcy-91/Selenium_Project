@@ -54,7 +54,7 @@ public class CategoryPage {
 	
 	public void isuserabletouploadafile(String IMAGEUPLOADPATH) {
 	
-		wait.waitForVisibilityOfElement(driver, choosefile);
+		wait.waitForElementTobeClickable(driver, choosefile);
 		
 		choosefile.sendKeys(IMAGEUPLOADPATH);
 	}

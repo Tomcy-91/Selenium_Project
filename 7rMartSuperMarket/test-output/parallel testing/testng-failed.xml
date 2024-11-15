@@ -12,10 +12,18 @@
           <include name="afterMethod"/>
           <include name="validusernameinvalidpassword"/>
           <include name="beforeMethod"/>
+          <include name="invalidUsernameInvalidPassword"/>
           <include name="verifyUserIsAbletoLoginValidCredentials"/>
           <include name="invalidUsernameValidPassword"/>
         </methods>
       </class> <!-- testscript.LoginTest -->
+      <class name="testscript.HomePageTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="verifyUserisabletoClickLogout"/>
+        </methods>
+      </class> <!-- testscript.HomePageTest -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [parallel testing] -->

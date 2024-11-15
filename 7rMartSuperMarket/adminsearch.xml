@@ -4,22 +4,19 @@
 	<parameter name="browzer" value="chrome"></parameter>
 	<parameter name="username" value="admin"></parameter>
 	<parameter name="password" value="admin"></parameter>
-	<parameter name="category" value="247"></parameter>
-	<parameter name="subcategory" value="TestCat"></parameter>
-	<parameter name="adminUsername" value="admin123testing"></parameter>
-	<parameter name="adminPassword" value="test8900"></parameter>
+	<parameter name="adminUsername" value="admintest"></parameter>
+	<parameter name="adminPassword" value="admintttt"></parameter>
 	<parameter name="adminUserType" value="staff"></parameter>
-	<parameter name="selection" value="C:\\Users\\tomcy\\apple.jpg"></parameter>
+	
 	<test thread-count="5" name="Test">
-		
 		<classes>
-			<class name="testscript.LoginTest">
+			<class name="testscript.AdminUserTest">
 				<methods>
-					
-					<include name="invalidUsernameInvalidPassword"></include>
+					<include name="verifyUserisAbletocreateNewAdminUser" />
+
 				</methods>
-				
 			</class>
+			
 		</classes>
 	</test> <!--
 	Test -->

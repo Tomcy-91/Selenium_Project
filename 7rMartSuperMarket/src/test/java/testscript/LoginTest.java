@@ -20,7 +20,7 @@ public class LoginTest extends BaseClass{
 	  input[0][0] = "admin";
 	  input[0][1] ="admin";
 	  input[1][0] ="admin1234000";
-	  input[1][1]="admin";
+	 input[1][1]="admin";
 	return input;
 	
 	  
@@ -66,7 +66,7 @@ public class LoginTest extends BaseClass{
 		Assert.assertTrue(isErrorMessageDisplayed,Constant.ERRORMESSAGEFORLOGINPAGE);
 		
  }
-  @Test
+  @Test(retryAnalyzer = retry.Retry.class)
   public void invalidUsernameInvalidPassword() throws IOException {
 	  
 	  String username= ExcelUtility.getstringdata(4, 0, "loginpage");

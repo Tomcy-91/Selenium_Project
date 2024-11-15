@@ -18,45 +18,50 @@ public class AdminUserPage {
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']") WebElement adminusermoreinfolink;
+	
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']") WebElement adminUserNewbutton;
 	@FindBy(xpath="//input[@id='username']")WebElement adminUsername;
 	@FindBy(xpath="//input[@id='password']") WebElement adminPassword;
 	@FindBy(xpath="//select[@id='user_type']") WebElement adminUserType;
 	@FindBy(xpath="//button[@name='Create']") WebElement saveButton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement adminusercreateConfirmation;
-	
-	public void IsUserAbletoClickonAdminUserMoreInfolink() {
-		
-		adminusermoreinfolink.click();
-			
-	}
-	public void isUserAbletoClickonAdminUserNewButton() {
+//	
+//	public void IsUserAbletoClickonAdminUserMoreInfolink() {
+//		
+//		adminusermoreinfolink.click();
+//			
+//	}
+	public AdminUserPage isUserAbletoClickonAdminUserNewButton() {
 		
 		adminUserNewbutton.click();
+		return this;
 	}
 	
-	public void enterAdminUserUsernamefield(String adminUsernamefield) {
+	public AdminUserPage enterAdminUserUsernamefield(String adminUsernamefield) {
 		
 		adminUsername.sendKeys(adminUsernamefield);
+		return this;
 		
 	}
 	
-	public void enterAdminUserPasswordfield (String adminUserPasswordfield) {
+	public AdminUserPage enterAdminUserPasswordfield (String adminUserPasswordfield) {
 		
 		adminPassword.sendKeys(adminUserPasswordfield);
+		return this;
 		
 	}
 	
-	public void selectAdminuserType( String adminUsertypeValue) {
+	public AdminUserPage selectAdminuserType( String adminUsertypeValue) {
 		
 		PageUtilities pageutilities = new PageUtilities(driver);
 		pageutilities.selectByValueofElement(adminUserType, adminUsertypeValue);
+		return this;
 	}
 	
-	public void isUserabletoClickonSaveButton()
+	public AdminUserPage isUserabletoClickonSaveButton()
 	{
 		saveButton.click();
+		return this;
 	}
 	
 public boolean getvalidConfirmationfornewadminusercreation() {

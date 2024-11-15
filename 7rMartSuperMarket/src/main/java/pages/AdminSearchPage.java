@@ -24,9 +24,10 @@ public class AdminSearchPage {
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']") WebElement adminResetButton;
 	@FindBy(xpath="//a[@href= 'https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='btn btn-rounded btn-warning']") WebElement resultnotfound;
 	
-public void IsUserAbletoClickonAdminUserMoreInfolink() {
+public AdminSearchPage IsUserAbletoClickonAdminUserMoreInfolink() {
 		
 		adminusermoreinfolink.click();
+		return this;
 			
 	}
 	
@@ -36,31 +37,36 @@ public void IsUserAbletoClickonAdminUserMoreInfolink() {
 		
 	}
 	
-	public void isuserabletoclickonAdminSearchbutton() {
+	public AdminSearchPage isuserabletoclickonAdminSearchbutton() {
 		
 		adminsearchbutton.click();
+		return this;
 	}
 	
-	public void isuserabletoentertheUsernameinAdminSearchPage(String searchUsernamefield) {
+	public AdminSearchPage isuserabletoentertheUsernameinAdminSearchPage(String searchUsernamefield) {
 		
 		adminSearchUsername.sendKeys(searchUsernamefield);
+		return this;
 	}
 	
-	public void isuserabletoselectUserTypeinAdminSearchPage(String searchUserType) {
+	public AdminSearchPage isuserabletoselectUserTypeinAdminSearchPage(String searchUserType) {
 		
 		PageUtilities pageutilities = new PageUtilities(driver);
 		pageutilities.selectByValueofElement(adminSearchUserType, searchUserType);
+		return this;
 	}
 	
-	public void isuserabletoclickonSearchbutton() {
+	public AdminSearchPage isuserabletoclickonSearchbutton() {
 		
 		searchAdminResult.click();
+		return this;
 		
 	}
 	
-	public void isuserabletoclickonResetButton() {
+	public AdminSearchPage isuserabletoclickonResetButton() {
 		
 		adminResetButton.click();
+		return this;
 		
 	}
 	

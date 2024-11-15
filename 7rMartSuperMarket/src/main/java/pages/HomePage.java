@@ -16,8 +16,13 @@ public class HomePage {
 }
 	@FindBy(xpath="//img[@src='https://groceryapp.uniqassosiates.com/public/assets/admin/dist/img/avatar5.png']") WebElement admin;
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/logout']") WebElement logout;
-	
-	
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']") WebElement adminusermoreinfolink;
+	public AdminUserPage IsUserAbletoClickonAdminUserMoreInfolink() {
+		
+	adminusermoreinfolink.click();
+	return new AdminUserPage(driver);
+			
+	}
 	public void isUserabletoclickonAdmin() {
 		
 		admin.click();
