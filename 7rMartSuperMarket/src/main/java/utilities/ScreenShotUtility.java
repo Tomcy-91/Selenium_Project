@@ -17,7 +17,9 @@ public class ScreenShotUtility {
 		File screenShot = scrShot.getScreenshotAs(OutputType.FILE); // screenshot will store in temporary path
 																	// "screenShot
 		File f1 = new File(System.getProperty("user.dir") + "\\OutputScreenshots");// Generating folder using Java
-																					// (user.dir) automatically folder
+		if (!f1.exists()) {
+			f1.mkdirs();
+		}																			// (user.dir) automatically folder
 String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date(0));// date time capture using
 																							// java
 		File finalDestination = new File(

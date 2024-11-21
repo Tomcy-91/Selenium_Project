@@ -3,6 +3,7 @@ package testscript;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import constants.Constant;
@@ -18,12 +19,13 @@ public class AdminSerachTest extends BaseClass{
 	AdminSearchPage adminsearchpage;
 	AdminUserPage adminuserpage;
   @Test
-  public void verifyuserisabletosearchanadminuser() throws IOException {
+  @Parameters({"adminsearchusername","adminsearchusertype"})
+  public void verifyuserisabletosearchanadminuser(String adminsearchusername , String adminsearchusertype ) throws IOException {
 	  
 	String username= ExcelUtility.getstringdata(1, 0, "loginpage");
 	String password = ExcelUtility.getstringdata(1, 1,"loginpage");
-	String adminsearchusername= ExcelUtility.getstringdata(1, 0, "AdminSearchPage");
-	String adminsearchusertype = ExcelUtility.getstringdata(1, 1,"AdminSearchPage");
+	//String adminsearchusername= ExcelUtility.getstringdata(1, 0, "AdminSearchPage");
+	//String adminsearchusertype = ExcelUtility.getstringdata(1, 1,"AdminSearchPage");
 	//LoginPage loginpage = new LoginPage(driver);
 	//loginpage.enterUserNamefield(username);
 	//loginpage.enterPasswordfield(password);
@@ -39,7 +41,7 @@ public class AdminSerachTest extends BaseClass{
 	loginpage.enterUserNamefield(username).enterPasswordfield(password);
 	homepage = loginpage.clickOnsigninbutton();
 	adminuserpage =homepage.IsUserAbletoClickonAdminUserMoreInfolink();
-	adminsearchpage = adminsearchpage.isuserabletoclickonAdminSearchbutton().isuserabletoentertheUsernameinAdminSearchPage(adminsearchusername).isuserabletoselectUserTypeinAdminSearchPage(adminsearchusertype).isuserabletoclickonSearchbutton();
+	adminsearchpage.isuserabletoclickonAdminSearchbutton().isuserabletoentertheUsernameinAdminSearchPage(adminsearchusername).isuserabletoselectUserTypeinAdminSearchPage(adminsearchusertype).isuserabletoclickonSearchbutton();
 	Assert.assertTrue(adminsearchpage.resultnotfounderrormessage(),Constant.USER_NOT_FOUND_MESSAGE);
 	adminsearchpage.isuserabletoclickonResetButton();
   }

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\tomcy\git\Selenium_Project\7rMartSuperMarket\Parameter.xml</span>
+                    <span>C:\Users\tomcy\git\Selenium_Project\7rMartSuperMarket\adminuser.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="invalidUsernameInvalidPassword">invalidUsernameInvalidPassword</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscript.AdminUserTest" class="method navigator-link" hash-for-method="verifyUserisAbletocreateNewAdminUser(admin, admin, admin1200, test00, Staff)">verifyUserisAbletocreateNewAdminUser(admin, admin, admin1200, test00, Staff)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,25 +118,39 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testscript.LoginTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testscript.AdminUserTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="invalidUsernameInvalidPassword">
-                  </a> <!-- invalidUsernameInvalidPassword -->
-                  <span class="method-name">invalidUsernameInvalidPassword</span>
+                  <a name="verifyUserisAbletocreateNewAdminUser(admin, admin, admin1200, test00, Staff)">
+                  </a> <!-- verifyUserisAbletocreateNewAdminUser(admin, admin, admin1200, test00, Staff) -->
+                  <span class="method-name">verifyUserisAbletocreateNewAdminUser</span>
+                  <span class="parameters">(admin,admin,admin1200,test00,Staff)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate option with value: Staff
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:289)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:194)
+	at utilities.PageUtilities.selectByVisibleText(PageUtilities.java:30)
+	at pages.AdminUserPage.selectAdminuserType(AdminUserPage.java:59)
+	at testscript.AdminUserTest.verifyUserisAbletocreateNewAdminUser(AdminUserTest.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\tomcy\git\Selenium_Project\7rMartSuperMarket\Parameter.xml</span>
+            <span class="header-content">C:\Users\tomcy\git\Selenium_Project\7rMartSuperMarket\adminuser.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,21 +158,18 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;browzer&quot; value=&quot;chrome&quot;/&gt;
-  &lt;parameter name=&quot;adminUsername&quot; value=&quot;admin123testing&quot;/&gt;
+  &lt;parameter name=&quot;adminUsername&quot; value=&quot;admin1200&quot;/&gt;
   &lt;parameter name=&quot;password&quot; value=&quot;admin&quot;/&gt;
-  &lt;parameter name=&quot;selection&quot; value=&quot;C:\\Users\\tomcy\\apple.jpg&quot;/&gt;
-  &lt;parameter name=&quot;category&quot; value=&quot;247&quot;/&gt;
-  &lt;parameter name=&quot;subcategory&quot; value=&quot;TestCat&quot;/&gt;
-  &lt;parameter name=&quot;adminUserType&quot; value=&quot;staff&quot;/&gt;
+  &lt;parameter name=&quot;adminUserType&quot; value=&quot;Staff&quot;/&gt;
   &lt;parameter name=&quot;username&quot; value=&quot;admin&quot;/&gt;
-  &lt;parameter name=&quot;adminPassword&quot; value=&quot;test8900&quot;/&gt;
+  &lt;parameter name=&quot;adminPassword&quot; value=&quot;test00&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testscript.LoginTest&quot;&gt;
+      &lt;class name=&quot;testscript.AdminUserTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;invalidUsernameInvalidPassword&quot;/&gt;
+          &lt;include name=&quot;verifyUserisAbletocreateNewAdminUser&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testscript.LoginTest --&gt;
+      &lt;/class&gt; &lt;!-- testscript.AdminUserTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -200,14 +211,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'invalidUsernameInvalidPassword')
-data.setCell(0, 2, 'testscript.LoginTest')
-data.setCell(0, 3, 1428);
+data.setCell(0, 1, 'verifyUserisAbletocreateNewAdminUser')
+data.setCell(0, 2, 'testscript.AdminUserTest')
+data.setCell(0, 3, 11478);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -222,20 +233,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testscript.LoginTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">validusernameinvalidpassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyUserIsAbletoLoginValidCredentials</span>
-                <br/>
-                <span class="ignored-method-name">invalidUsernameValidPassword</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -244,20 +244,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testscript.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testscript.AdminUserTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">invalidUsernameInvalidPassword</span>
-                <span class="method-start">2566 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyUserisAbletocreateNewAdminUser(admin, admin, admin1200, test00, Staff)</span>
+                <span class="method-start">4006 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">afterMethod([TestResult name=invalidUsernameInvalidPassword status=SUCCESS method=LoginTest.invalidUsernameInval...)</span>
-                <span class="method-start">3997 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyUserisAbletocreateNewAdminUser status=FAILURE method=AdminUserTest.verifyUser...)</span>
+                <span class="method-start">15490 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -10,7 +10,7 @@ import constants.Constant;
 import pages.AdminUserPage;
 import pages.HomePage;
 import pages.LoginPage;
-import utilities.ExcelUtility;
+
 
 public class AdminUserTest extends BaseClass {
 	
@@ -41,8 +41,11 @@ public class AdminUserTest extends BaseClass {
 		loginpage.enterUserNamefield(username).enterPasswordfield(password);
 		homepage = loginpage.clickOnsigninbutton();
 		adminuserpage=homepage.IsUserAbletoClickonAdminUserMoreInfolink();
-		adminuserpage.isUserAbletoClickonAdminUserNewButton().enterAdminUserUsernamefield(adminUsername).enterAdminUserPasswordfield(adminPassword)
-		.selectAdminuserType(adminUserType).isUserabletoClickonSaveButton();
+		adminuserpage.isUserAbletoClickonAdminUserNewButton();
+		adminuserpage.enterAdminUserUsernamefield(adminUsername);
+		adminuserpage.enterAdminUserPasswordfield(adminPassword);
+		adminuserpage.selectAdminuserType(adminUserType);
+		adminuserpage.isUserabletoClickonSaveButton();
 		boolean  isnewAdminCreated = adminuserpage.getvalidConfirmationfornewadminusercreation();
 		Assert.assertTrue(isnewAdminCreated,Constant.CONFIRMATION_MESSAGE_FOR_NEW_ADMINUSER_CREATION);
 		

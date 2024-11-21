@@ -13,9 +13,11 @@ import pages.CategoryPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 import utilities.FileUploadUtility;
+import utilities.PageUtilities;
 
 public class CategoryTest extends BaseClass{
 	FileUploadUtility fileupload;
+	PageUtilities pageutility;
 	
 	@Test
 	@Parameters({"selection"})
@@ -36,8 +38,10 @@ public class CategoryTest extends BaseClass{
 		categorypage.isUserabletoClickonNewCategoryButton();
 		categorypage.entervalueinCategoryfield(categoryfield);
 		categorypage.isUserabeltoseleectgroupbyclickonit();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,2000)");
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("window.scrollBy(0,2000)");
+		pageutility.scrollPageToDown(2000);
+		
 		categorypage.isuserabletouploadafile(selection);
 		//fileupload.verify_FileUpload_UsingRobot(selection);
 		boolean  isneCategoryCreated = categorypage.getvalidConfirmationforCategorycreation();

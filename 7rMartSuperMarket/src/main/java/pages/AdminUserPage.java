@@ -7,11 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import utilities.PageUtilities;
+import utilities.WaitUtility;
 
 public class AdminUserPage {
 	
 
 	WebDriver driver;
+	public WaitUtility wait;
 	public  AdminUserPage (WebDriver driver) {
 		
 		this.driver = driver;
@@ -51,10 +53,10 @@ public class AdminUserPage {
 		
 	}
 	
-	public AdminUserPage selectAdminuserType( String adminUsertypeValue) {
-		
+	public AdminUserPage selectAdminuserType( String adminUsertypeValue) { 
+		//wait.waitForElementToBePresent(driver,adminUserType);
 		PageUtilities pageutilities = new PageUtilities(driver);
-		pageutilities.selectByValueofElement(adminUserType, adminUsertypeValue);
+		pageutilities.selectByVisibleText(adminUserType, adminUsertypeValue);
 		return this;
 	}
 	

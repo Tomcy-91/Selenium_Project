@@ -4,14 +4,9 @@
 	<parameter name="browzer" value="chrome"></parameter>
 	<parameter name="username" value="admin"></parameter>
 	<parameter name="password" value="admin"></parameter>
-	<parameter name="subcategorydropdownValue" value="Grocery"></parameter>
-	<parameter name="subcategoryfield" value="TestSubCategory"></parameter>
-	<parameter name="adminUsername" value="admin123testing"></parameter>
-	<parameter name="adminPassword" value="test8900"></parameter>
+	<parameter name="adminUsername" value="admin1200"></parameter>
+	<parameter name="adminPassword" value="test00"></parameter>
 	<parameter name="adminUserType" value="Staff"></parameter>
-	<parameter name="adminsearchusertype" value="2"></parameter>
-	<parameter name="adminsearchusername" value="adminnewtest"></parameter>
-	<parameter name="selection" value="C:\\Users\\tomcy\\apple.jpg"></parameter>
 	<test thread-count="5" name="Test">
 		
 		<classes>

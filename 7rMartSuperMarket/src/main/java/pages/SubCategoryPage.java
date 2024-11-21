@@ -36,10 +36,11 @@ public void isUserabletoClickonNewbuttoninsubCategorypage() {
 	
 	subcategory_newbutton.click();
 }
-public void selectsubcategoryvaluefromdropdown( String subcategoryValue) {
+public void selectsubcategoryvaluefromdropdown( String subcategorydropdownValue) {
 	wait.waitForVisibilityOfElement(driver, category_dropdownvalue);
 	PageUtilities pageutilities = new PageUtilities(driver);
-	pageutilities.selectByValueofElement(category_dropdownvalue, subcategoryValue);
+	pageutilities.selectByVisibleText(category_dropdownvalue, subcategorydropdownValue);
+	
 }
 
 

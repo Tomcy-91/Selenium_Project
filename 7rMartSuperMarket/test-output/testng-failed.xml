@@ -2,24 +2,20 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browzer" value="chrome"/>
-  <parameter name="adminUsername" value="admin123testing"/>
-  <parameter name="password" value="admin8888"/>
-  <parameter name="selection" value="C:\\Users\\tomcy\\apple.jpg"/>
-  <parameter name="category" value="247"/>
-  <parameter name="subcategory" value="TestCat"/>
-  <parameter name="adminUserType" value="staff"/>
+  <parameter name="adminUsername" value="admin1200"/>
+  <parameter name="password" value="admin"/>
+  <parameter name="adminUserType" value="Staff"/>
   <parameter name="username" value="admin"/>
-  <parameter name="adminPassword" value="test8900"/>
+  <parameter name="adminPassword" value="test00"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testscript.LoginTest">
+      <class name="testscript.AdminUserTest">
         <methods>
+          <include name="verifyUserisAbletocreateNewAdminUser" invocation-numbers="0"/>
           <include name="afterMethod"/>
-          <include name="validusernameinvalidpassword"/>
           <include name="beforeMethod"/>
-          <include name="verifyUserIsAbletoLoginValidCredentials"/>
         </methods>
-      </class> <!-- testscript.LoginTest -->
+      </class> <!-- testscript.AdminUserTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

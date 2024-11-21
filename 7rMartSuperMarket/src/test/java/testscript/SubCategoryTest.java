@@ -15,8 +15,8 @@ public class SubCategoryTest extends BaseClass {
 	
 	FileUploadUtility fileupload;
   @Test
-  @Parameters({"username" , "password" ,"category" , "subcategory" , "selection"})
-  public void verifyuserisabletoaddnewsubcategory(String username , String password , String category_dropdownvalue , String subcategoryfield_value, String selection ) throws IOException {
+  @Parameters({"username" , "password" ,"subcategorydropdownValue" , "subcategoryfield" , "selection"})
+  public void verifyuserisabletoaddnewsubcategory(String username , String password , String subcategorydropdownValue , String subcategoryfield_value, String selection ) throws IOException {
 	  
 	  
 	 // String username= ExcelUtility.getstringdata(1, 0, "loginpage");
@@ -31,7 +31,7 @@ public class SubCategoryTest extends BaseClass {
 		SubCategoryPage subcategorypage = new SubCategoryPage(driver);
 		subcategorypage.isUserabletoclickonsubCategoryInfoLink();
 		subcategorypage.isUserabletoClickonNewbuttoninsubCategorypage();
-		subcategorypage.selectsubcategoryvaluefromdropdown(category_dropdownvalue);
+		subcategorypage.selectsubcategoryvaluefromdropdown(subcategorydropdownValue);
 		subcategorypage.entervalueinsubCategoryfield(subcategoryfield_value);
 		subcategorypage.isuserabletouploadafileinsubcategorypage(selection);
 		subcategorypage.isuserabletoclickonSavebutton();
