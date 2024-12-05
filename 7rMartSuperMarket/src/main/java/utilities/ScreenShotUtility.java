@@ -9,8 +9,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.TakesScreenshot;
+
 public class ScreenShotUtility {
-	
+
 	public void captureFailureScreenShot(WebDriver driver, String name) throws IOException {
 		// Interface & method for Capture Screenshot
 		TakesScreenshot scrShot = (TakesScreenshot) driver;
@@ -19,8 +20,8 @@ public class ScreenShotUtility {
 		File f1 = new File(System.getProperty("user.dir") + "\\OutputScreenshots");// Generating folder using Java
 		if (!f1.exists()) {
 			f1.mkdirs();
-		}																			// (user.dir) automatically folder
-String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date(0));// date time capture using
+		} // (user.dir) automatically folder
+		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date(0));// date time capture using
 																							// java
 		File finalDestination = new File(
 				System.getProperty("user.dir") + "\\OutputScreenshots\\" + name + "_" + timeStamp + ".png");

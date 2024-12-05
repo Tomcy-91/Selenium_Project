@@ -38,7 +38,7 @@ public class AdminSerachTest extends BaseClass{
 	//adminsearchpage.isuserabletoselectUserTypeinAdminSearchPage(adminsearchusertype);
 	//adminsearchpage.isuserabletoclickonSearchbutton();
 	LoginPage loginpage = new LoginPage(driver);
-	loginpage.enterUserNamefield(username).enterPasswordfield(password);
+	loginpage.enterUserNamefield_and_enterPasswordfield(username, password);
 	homepage = loginpage.clickOnsigninbutton();
 	adminuserpage =homepage.IsUserAbletoClickonAdminUserMoreInfolink();
 	adminsearchpage.isuserabletoclickonAdminSearchbutton().isuserabletoentertheUsernameinAdminSearchPage(adminsearchusername).isuserabletoselectUserTypeinAdminSearchPage(adminsearchusertype).isuserabletoclickonSearchbutton();

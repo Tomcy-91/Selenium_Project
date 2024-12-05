@@ -13,15 +13,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class FileUploadUtility {
-	
+
 	WebDriver driver;
+
 	public FileUploadUtility() {
-		
+
 		this.driver = driver;
-			PageFactory.initElements(driver,this);
-		}
-	
-	
+		PageFactory.initElements(driver, this);
+	}
+
 //
 //	public void verify_FileUpload_UsingSendKeys(){
 //		
@@ -36,14 +36,15 @@ public class FileUploadUtility {
 //		submitButton.click();
 //	}
 	public void verify_FileUpload_UsingRobot() throws AWTException {
-		
-		//WebDriver driver=new ChromeDriver();
-		//driver.get("https://www.ilovepdf.com/pdf_to_word");
-		//driver.manage().window().maximize();
-		//WebElement  selectFile = driver.findElement(By.xpath("//input[@id='main_img']"));
-		//selectFile.click();
+
+		// WebDriver driver=new ChromeDriver();
+		// driver.get("https://www.ilovepdf.com/pdf_to_word");
+		// driver.manage().window().maximize();
+		// WebElement selectFile =
+		// driver.findElement(By.xpath("//input[@id='main_img']"));
+		// selectFile.click();
 		StringSelection selection = new StringSelection("C:\\Users\\tomcy\\apple.jpg");
-		
+
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
 		Robot robot = new Robot();
 		robot.delay(250);
@@ -56,8 +57,7 @@ public class FileUploadUtility {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.delay(90);
 		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-		
+
 	}
 
 }

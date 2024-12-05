@@ -12,21 +12,21 @@ import utilities.ExcelUtility;
 import utilities.FileUploadUtility;
 
 public class SubCategoryTest extends BaseClass {
-	
+
 	FileUploadUtility fileupload;
-  @Test
-  @Parameters({"username" , "password" ,"subcategorydropdownValue" , "subcategoryfield" , "selection"})
-  public void verifyuserisabletoaddnewsubcategory(String username , String password , String subcategorydropdownValue , String subcategoryfield_value, String selection ) throws IOException {
-	  
-	  
-	 // String username= ExcelUtility.getstringdata(1, 0, "loginpage");
-	 // String password = ExcelUtility.getstringdata(1, 1,"loginpage");
-	  
-	  //String selection="C:\\Users\\tomcy\\apple.jpg";
-	  
+
+	@Test
+	@Parameters({ "username", "password", "subcategorydropdownValue", "subcategoryfield", "selection" })
+	public void verifyuserisabletoaddnewsubcategory(String username, String password, String subcategorydropdownValue,
+			String subcategoryfield_value, String selection) throws IOException {
+
+		// String username= ExcelUtility.getstringdata(1, 0, "loginpage");
+		// String password = ExcelUtility.getstringdata(1, 1,"loginpage");
+
+		// String selection="C:\\Users\\tomcy\\apple.jpg";
+
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUserNamefield(username);
-		loginpage.enterPasswordfield(password);
+		loginpage.enterUserNamefield_and_enterPasswordfield(username, password);
 		loginpage.clickOnsigninbutton();
 		SubCategoryPage subcategorypage = new SubCategoryPage(driver);
 		subcategorypage.isUserabletoclickonsubCategoryInfoLink();
@@ -35,7 +35,6 @@ public class SubCategoryTest extends BaseClass {
 		subcategorypage.entervalueinsubCategoryfield(subcategoryfield_value);
 		subcategorypage.isuserabletouploadafileinsubcategorypage(selection);
 		subcategorypage.isuserabletoclickonSavebutton();
-		
-		
-  }
+
+	}
 }

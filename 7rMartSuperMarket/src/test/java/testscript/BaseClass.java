@@ -23,16 +23,17 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
 public class BaseClass {
- 
-  WebDriver driver;
-  public Properties properties;
-  public FileInputStream fis;
-  @BeforeMethod(alwaysRun = true)
-  @Parameters("browzer")
-  public void beforeMethod(String browzer) throws Exception {
-	  
-	  	//driver = new ChromeDriver();
-	  try {
+
+	WebDriver driver;
+	public Properties properties;
+	public FileInputStream fis;
+
+	@BeforeMethod(alwaysRun = true)
+	@Parameters("browzer")
+	public void beforeMethod(String browzer) throws Exception {
+
+		// driver = new ChromeDriver();
+		try {
 			properties = new Properties();
 			fis = new FileInputStream(Constant.CONFIGFILE);
 			properties.load(fis);
@@ -49,24 +50,24 @@ public class BaseClass {
 		} else {
 			throw new Exception("invalid browser");
 		}
-		//driver.get("https://groceryapp.uniqassosiates.com/admin/login");
+		// driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		driver.get(properties.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-  }
+	}
 
-  @AfterMethod
-  public void afterMethod(ITestResult itResult) throws IOException {
-	  
-	  if (itResult.getStatus() == ITestResult.FAILURE) {
-		  ScreenShotUtility sc = new ScreenShotUtility();
+	@AfterMethod
+	public void afterMethod(ITestResult itResult) throws IOException {
+
+		if (itResult.getStatus() == ITestResult.FAILURE) {
+			ScreenShotUtility sc = new ScreenShotUtility();
 			sc.captureFailureScreenShot(driver, itResult.getName());
 		}
 		if (driver != null) {
 			driver.quit();
 		}
-	  
-	  driver.close();
-  }
+
+		driver.close();
+	}
 
 }

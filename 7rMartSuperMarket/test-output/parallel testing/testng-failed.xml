@@ -7,16 +7,6 @@
   <test thread-count="5" parallel="classes" name="Chrome Test(failed)">
     <parameter name="browzer" value="chrome"/>
     <classes>
-      <class name="testscript.LoginTest">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="validusernameinvalidpassword"/>
-          <include name="beforeMethod"/>
-          <include name="invalidUsernameInvalidPassword"/>
-          <include name="verifyUserIsAbletoLoginValidCredentials"/>
-          <include name="invalidUsernameValidPassword"/>
-        </methods>
-      </class> <!-- testscript.LoginTest -->
       <class name="testscript.HomePageTest">
         <methods>
           <include name="afterMethod"/>
@@ -24,6 +14,16 @@
           <include name="verifyUserisabletoClickLogout"/>
         </methods>
       </class> <!-- testscript.HomePageTest -->
+      <class name="testscript.LoginTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="validusernameinvalidpassword"/>
+          <include name="beforeMethod"/>
+          <include name="verifyUserIsAbletoLoginValidCredentials"/>
+          <include name="invalidUsernameValidPassword"/>
+          <include name="invalidUsernameInvalidPassword"/>
+        </methods>
+      </class> <!-- testscript.LoginTest -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [parallel testing] -->
